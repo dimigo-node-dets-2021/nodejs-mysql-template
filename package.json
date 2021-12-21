@@ -1,0 +1,8 @@
+{
+  "name": "nodejs-mysql-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dimigo-node-dets-2021/nodejs-mysql-template.git",
+  "author": "cokia <hwymaster01@gmail.com>",
+  "license": "MIT"
+}
