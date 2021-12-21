@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import bodyParser from 'body-parser';
 import { authMiddleware } from '../middleware/auth';
-const test = require('../controllers/tutorial.controller.js');
+const test = require('../controllers/test.controller.js');
 
 const router = Router();
 router.use(bodyParser.json());
