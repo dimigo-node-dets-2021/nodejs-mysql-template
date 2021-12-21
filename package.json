@@ -4,5 +4,24 @@
   "main": "index.js",
   "repository": "https://github.com/dimigo-node-dets-2021/nodejs-mysql-template.git",
   "author": "cokia <hwymaster01@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "npx babel-node src/app.js "
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "sequelize": "^6.12.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/preset-env": "^7.16.5"
+  }
 }
