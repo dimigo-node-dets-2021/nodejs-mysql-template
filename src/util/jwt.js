@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
-import config from '../../config';
-const config = require('../../config');
+import config from '../config.js';
 
 export const signingOptions = {
   expiresIn: '999d',
