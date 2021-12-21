@@ -37,10 +37,10 @@ exports.logintest = (req, res) => {
 exports.login = async (req, res) => {
   const { username, pw } = req.body;
   Users.findOne({ where: { username } })
-    .then((data) => {
+    .then(async (data) => {
       if (data) {
         if (data.pw === pw) {
-          const a = signJWT(req.body);
+          const a = await signJWT(req.body);
           res.send(a);
         } else if (data.pw !== pw) {
           res.send('account but invaild pw');
