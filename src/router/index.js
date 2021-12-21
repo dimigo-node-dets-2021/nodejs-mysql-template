@@ -6,11 +6,10 @@ import * as test from '../controller/test.controller';
 const router = Router();
 router.use(bodyParser.json());
 
-router.post('/', test.create);
-  router.get('/', test.findAll);
-  router.get('/published', test.findAllPublished);
-  router.get('/:id', test.findOne);
-  router.put('/:id', test.update);
-  router.delete('/:id', test.delete);
-  router.delete('/', test.deleteAll);
+router.post('/register', test.register);
+router.get('/logintest', test.logintest);
+router.get('/login', test.login);
+
+router.get('/', test.findAll);
+  
 export default router;

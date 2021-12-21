@@ -3,6 +3,7 @@ import config from '../config.js';
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(config.database.DB, config.database.USER, config.database.PASSWORD, {
   host: config.database.HOST,
+  port: config.database.PORT,
   dialect: config.database.dialect,
   operatorsAliases: false,
 
@@ -15,8 +16,8 @@ const sequelize = new Sequelize(config.database.DB, config.database.USER, config
 });
 
 export const db = {};
-
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-
+db.sequelize.sync();
 db.tests = require('./test.model.js')(sequelize, Sequelize);
+db.users = require('./users.model.js')(sequelize, Sequelize);
