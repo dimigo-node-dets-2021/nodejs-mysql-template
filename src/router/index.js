@@ -1,11 +1,12 @@
 import { Router } from 'express';
 import bodyParser from 'body-parser';
-  const test = require('../controllers/tutorial.controller.js');
+import { authMiddleware } from '../middleware/auth';
+const test = require('../controllers/tutorial.controller.js');
 
-  const router = Router();
-  router.use(bodyParser.json());
+const router = Router();
+router.use(bodyParser.json());
 
-  router.post('/', test.create);
+router.post('/', authMiddleware, test.create);
   router.get('/', test.findAll);
   router.get('/published', test.findAllPublished);
   router.get('/:id', test.findOne);
