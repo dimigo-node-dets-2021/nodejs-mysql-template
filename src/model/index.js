@@ -1,4 +1,4 @@
-const config = require('../config');
+import config from '../config.js';
 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(config.database.DB, config.database.USER, config.database.PASSWORD, {

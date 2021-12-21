@@ -1,4 +1,4 @@
-const db = require('../models');
+import { db } from '../model/index.js';
 const Test = db.tests;
 const Op = db.Sequelize.Op;
 
